@@ -1,0 +1,51 @@
+ENTITY integracao IS 
+	PORT(A,B,C,D,E,F,G,H: IN bit; S1,S2,S3,S4,S5,S6,S7,S8: OUT bit);
+END ENTITY;
+
+ARCHITECTURE comportamento OF integracao IS 
+	COMPONENT termo1 IS 
+		PORT(A,B: IN bit; S1,S2: OUT bit);
+	END COMPONENT;
+
+	SIGNAL T0,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,T13,T14,T15,T16,T17,T18,T19,T20,T21,T22,T23,T24,T25,T26,T27,T28,T29,T30,T31,T32,T33,T34,T35,T36,T37,T38,T39,T40,T41,T42,T43,T44,T45,T46,T47,T48 : bit;
+
+BEGIN
+
+	parte1: termo1 PORT MAP(B,A,T1,T2);
+	
+	parte2: termo1 PORT MAP(C,T1,T3,T4);
+	parte3: termo1 PORT MAP(T4,T2,T5,T6);
+	
+	parte4: termo1 PORT MAP(D,T3,T7,T8);
+	parte5: termo1 PORT MAP(T8,T5,T9,T10);
+	parte6: termo1 PORT MAP(T10,T6,T11,T12);
+	
+	parte7: termo1 PORT MAP(E,T7,T13,T14);
+	parte8: termo1 PORT MAP(T14,T9,T15,T16);
+	parte9: termo1 PORT MAP(T16,T11,T17,T18);
+	parte10: termo1 PORT MAP(T18,T12,T19,T20);
+	
+	parte11: termo1 PORT MAP(F,T13,T21,T22);
+	parte12: termo1 PORT MAP(T22,T15,T23,T24);
+	parte13: termo1 PORT MAP(T24,T17,T25,T26);
+	parte14: termo1 PORT MAP(T26,T19,T27,T28);
+	parte15: termo1 PORT MAP(T28,T20,T29,T30);
+	
+	parte16: termo1 PORT MAP(G,T21,T31,T32);
+	parte17: termo1 PORT MAP(T32,T23,T33,T34);
+	parte18: termo1 PORT MAP(T34,T25,T35,T36);
+	parte19: termo1 PORT MAP(T36,T27,T37,T38);
+	parte20: termo1 PORT MAP(T38,T29,T39,T40);
+	parte21: termo1 PORT MAP(T40,T30,T41,T42);
+	
+	parte22: termo1 PORT MAP(H,T31,S1,T43);
+	parte23: termo1 PORT MAP(T43,T33,S2,T44);
+	parte24: termo1 PORT MAP(T44,T35,S3,T45);
+	parte25: termo1 PORT MAP(T45,T37,S4,T46);
+	parte26: termo1 PORT MAP(T46,T39,S5,T47);
+	parte27: termo1 PORT MAP(T47,T41,S6,T48);
+	parte28: termo1 PORT MAP(T48,T42,S7,S8);
+	
+
+END ARCHITECTURE;
+
